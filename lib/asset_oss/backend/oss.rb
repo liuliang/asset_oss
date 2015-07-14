@@ -32,7 +32,8 @@ module AssetOSS
     end
     
     def self.oss_bucket_url
-      "http://#{oss_bucket}.oss.aliyuncs.com#{oss_folder ? "/#{oss_folder}" : '' }"
+      # "http://#{oss_bucket}.oss.aliyuncs.com#{oss_folder ? "/#{oss_folder}" : '' }"
+      "http://#{oss_config['host']}#{oss_folder ? "/#{oss_folder}" : '' }"
     end
     
     def self.full_path(asset)
